@@ -342,6 +342,8 @@ export default function CartPage() {
                       <input
                         id="security-code"
                         required
+                        inputMode="numeric"
+                        pattern="[0-9]{3}"
                         maxLength={3}
                         value={securityCode}
                         onChange={(event) =>
@@ -361,6 +363,8 @@ export default function CartPage() {
                       </label>
 
                       <input
+                        inputMode="numeric"
+                        pattern="[0-9]{5}"
                         id="postal-code"
                         required
                         maxLength={5}
