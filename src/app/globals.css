@@ -1,26 +1,129 @@
 @import "tailwindcss";
 
+@plugin "daisyui";
+
+@plugin "daisyui/theme" {
+  name: "nova";
+  default: true;
+  prefersdark: true;
+  color-scheme: dark;
+
+  /* Base */
+  --color-base-100: #020419;
+  --color-base-200: #020417;
+  --color-base-300: #050a3e;
+  --color-base-content: #e5e7eb;
+
+  /* Nova Brand */
+  --color-primary: #d036c8;
+  --color-primary-content: #ffffff;
+
+  --color-secondary: #5e37ca;
+  --color-secondary-content: #ffffff;
+
+  --color-accent: #1472ea;
+  --color-accent-content: #ffffff;
+
+  /* Neutral */
+  --color-neutral: #020417;
+  --color-neutral-content: #e5e7eb;
+
+  /* States */
+  --color-info: #1472ea;
+  --color-info-content: #ffffff;
+
+  --color-success: #22c55e;
+  --color-success-content: #ffffff;
+
+  --color-warning: #f59e0b;
+  --color-warning-content: #020419;
+
+  --color-error: #f84545;
+  --color-error-content: #ffffff;
+
+  /* Radius */
+  --radius-selector: 0.75rem;
+  --radius-field: 0.75rem;
+  --radius-box: 1.5rem;
+
+  /* Sizes */
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+
+  /* Border */
+  --border: 1px;
+
+  /* Effects */
+  --depth: 1;
+  --noise: 0;
+}
+
+/* =========================================================
+   Nova Design Tokens
+   ========================================================= */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --nova-bg-start: #020419;
+  --nova-bg-middle: #020417;
+  --nova-bg-end: #050a3e;
+
+  --nova-gradient: linear-gradient(
+    150deg,
+    #d036c8,
+    #d433c6,
+    #973cc7,
+    #5e37ca,
+    #1472ea
+  );
+
+  --nova-gradient-soft: linear-gradient(
+    135deg,
+    rgba(208, 54, 200, 0.18),
+    rgba(20, 114, 234, 0.2)
+  );
+
+  --nova-glass: rgba(2, 4, 23, 0.467);
+  --nova-glass-soft: rgba(2, 4, 23, 0.35);
+  --nova-input: rgba(255, 255, 255, 0.04);
+
+  --nova-border: rgba(75, 75, 75, 0.184);
+  --nova-border-strong: rgba(75, 75, 75, 0.801);
+  --nova-border-light: rgba(255, 255, 255, 0.12);
+
+  --nova-text: #e5e7eb;
+  --nova-text-secondary: #c6c6c7;
+  --nova-text-muted: #999999;
+
+  --nova-price: #d2c8fe;
+  --nova-sale: #f84545;
+
+  --nova-shadow:
+    0 6px 13px -4px rgba(29, 33, 57, 0.467);
+
+  --nova-shadow-heavy:
+    0 16px 40px rgba(0, 0, 0, 0.35);
+
+  --nova-blur: blur(60px);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* =========================================================
+   Global
+   ========================================================= */
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  background: var(--nova-bg-start);
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;  
+  font-family: var(--font-inter), sans-serif;
+  color: var(--nova-text);
+  background:
+    linear-gradient(
+      var(--nova-bg-start),
+      var(--nova-bg-middle),
+      var(--nova-bg-end)
+    );
+    overflow-x: hidden;
 }
