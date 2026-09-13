@@ -50,7 +50,7 @@ export default function Home() {
           </a>
         </div>
       </section>
-      <section className="featured-products mx-[30px] grid grid-cols-1 gap-5 border-t border-[var(--nova-border)] pt-[30px] md:grid-cols-2 p-[12px]">
+      <section className="featured-products mx-[30px] grid grid-cols-1 gap-5 border-t border-[var(--nova-border)] pt-[30px] md:grid-cols-2 p-[6px]">
         <ProductCard product={products[1]} />
         <ProductCard product={products[3]} />
         <ProductCard product={products[5]} />
