@@ -2,6 +2,8 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: "export",
+  basePath: "/Nova",
+  assetPrefix: "/Nova/",
   reactCompiler: true,
   devIndicators: false,
 
