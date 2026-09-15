@@ -5,10 +5,6 @@ const nextConfig: NextConfig = {
   reactCompiler: true,
   devIndicators: false,
 
-  images: {
-    unoptimized: true,
-  },
-
   allowedDevOrigins: ["192.168.100.2"],
 };
 
