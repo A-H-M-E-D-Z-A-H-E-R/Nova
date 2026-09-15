@@ -1,7 +1,17 @@
-import React from "react";
 import Image from "next/image";
 
-const ProductCard = ({ product }) => {
+type Product = {
+  id: string;
+  name: string;
+  price: string;
+  image: string;
+};
+
+type ProductCardProps = {
+  product: Product;
+};
+
+const ProductCard = ({ product }: ProductCardProps) => {
   return (
     <div className="overflow-hidden rounded-[30px] border border-[var(--nova-border)] bg-[var(--nova-glass)] p-[15px] shadow-[var(--nova-shadow)] backdrop-blur-[60px]">
       <figure>

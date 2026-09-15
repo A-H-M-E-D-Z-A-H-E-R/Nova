@@ -6,31 +6,14 @@ import Link from "next/link";
 
 import products from "@/app/components/data/products";
 
-const categories = [
-  "all",
-  "phones",
-  "laptops",
-  "audios",
-  "wearables",
-  "tablets",
-];
-
 export default function ProductsPage() {
   const [search, setSearch] = useState("");
-  const [category, setCategory] = useState("all");
 
   const filteredProducts = useMemo(() => {
-    return products.filter((product) => {
-      const matchesSearch = product.name
-        .toLowerCase()
-        .includes(search.toLowerCase());
-
-      const matchesCategory =
-        category === "all" || product.category === category;
-
-      return matchesSearch && matchesCategory;
-    });
-  }, [search, category]);
+    return products.filter((product) =>
+      product.name.toLowerCase().includes(search.toLowerCase()),
+    );
+  }, [search]);
 
   return (
     <main className="px-4 pt-36 pb-20 md:px-6">
@@ -42,13 +25,11 @@ export default function ProductsPage() {
               Nova collection
             </p>
 
-            <h1 className="mb-3 text-[2.1rem] font-bold">
-              All products
-            </h1>
+            <h1 className="mb-3 text-[2.1rem] font-bold">All products</h1>
 
             <p className="leading-[1.6] text-[#d4d8f0]">
-              Explore premium phones, laptops, audio, wearables, and tablets
-              in one polished collection.
+              Explore premium phones, laptops, audio, wearables, and tablets in
+              one polished collection.
             </p>
           </div>
         </section>
@@ -63,30 +44,6 @@ export default function ProductsPage() {
               onChange={(e) => setSearch(e.target.value)}
               className="h-11 min-w-0 flex-1 basis-[240px] rounded-full border border-white/[0.12] bg-[linear-gradient(135deg,rgba(208,54,200,0.16),rgba(20,114,234,0.16))] px-[14px] text-sm text-[#f3f4f6] outline-none placeholder:text-[#b9bfd8] focus:border-white/30 focus:shadow-[0_0_0_2px_rgba(208,54,200,0.25)]"
             />
-
-            <label
-              htmlFor="filter"
-              className="text-[0.95rem] text-[#dce1ff]"
-            >
-              Category:
-            </label>
-
-            <select
-              id="filter"
-              value={category}
-              onChange={(e) => setCategory(e.target.value)}
-              className="h-11 w-[180px] min-w-0 cursor-pointer appearance-none rounded-full border border-white/[0.12] bg-[linear-gradient(135deg,rgba(208,54,200,0.16),rgba(20,114,234,0.16))] px-[14px] pr-[38px] text-sm text-[#f3f4f6] outline-none focus:border-white/30 focus:shadow-[0_0_0_2px_rgba(208,54,200,0.25)] max-[680px]:w-full"
-            >
-              {categories.map((item) => (
-                <option
-                  key={item}
-                  value={item}
-                  className="bg-[#020417] text-[#f3f4f6]"
-                >
-                  {item}
-                </option>
-              ))}
-            </select>
           </div>
         </section>
 
