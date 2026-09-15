@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-
+import Link from "next/link";
 import ProductCard from "../components/ProductCard";
 import products from "../components/data/products";
 
@@ -33,7 +33,7 @@ export default function Home() {
           Discover premium technology designed for the way you live.
         </p>
         <div className="hero-btns flex justify-center gap-6 mt-5">
-          <a href="/products">
+          <Link href="/products">
             <button className="group relative h-12 w-40 rounded-xl bg-[linear-gradient(150deg,#d036c8,#d433c6,rgb(151,60,199),rgb(94,55,202),rgb(20,114,234))] p-px text-sm font-semibold text-white transition-all duration-300 mt-6 ">
               {" "}
               <span className="relative flex h-full w-full items-center justify-center rounded-[11px] bg-transparent transition-all duration-300 group-hover:bg-[var(--nova-bg-middle)] group-hover:text-[#b137c3] ">
@@ -41,13 +41,13 @@ export default function Home() {
                 Shop Products{" "}
               </span>{" "}
             </button>
-          </a>
+          </Link>
 
-          <a href="/products">
+          <Link href="/products">
             <button className="btn mt-6 h-12 w-40 border-[var(--nova-border-light)] bg-transparent text-[var(--nova-text-secondary)] hover:bg-white/5 hover:text-white">
               Explore
             </button>
-          </a>
+          </Link>
         </div>
       </section>
       <section className="featured-products mx-[30px] grid grid-cols-1 gap-5 border-t border-[var(--nova-border)] pt-[30px] md:grid-cols-2 p-[6px]">
@@ -64,48 +64,48 @@ export default function Home() {
 
           <ul className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-5">
             <li>
-              <a
+              <Link
                 href="/products"
                 className="flex h-28 items-center justify-center rounded-[25px] border border-[var(--nova-border)] bg-[var(--nova-glass)] text-[var(--nova-text-secondary)] shadow-[var(--nova-shadow)] backdrop-blur-[60px] transition duration-300 hover:-translate-y-1 hover:text-white"
               >
                 Phones
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a
+              <Link
                 href="/products"
                 className="flex h-28 items-center justify-center rounded-[25px] border border-[var(--nova-border)] bg-[var(--nova-glass)] text-[var(--nova-text-secondary)] shadow-[var(--nova-shadow)] backdrop-blur-[60px] transition duration-300 hover:-translate-y-1 hover:text-white"
               >
                 Laptops
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a
+              <Link
                 href="/products"
                 className="flex h-28 items-center justify-center rounded-[25px] border border-[var(--nova-border)] bg-[var(--nova-glass)] text-[var(--nova-text-secondary)] shadow-[var(--nova-shadow)] backdrop-blur-[60px] transition duration-300 hover:-translate-y-1 hover:text-white"
               >
                 Audio
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a
+              <Link
                 href="/products"
                 className="flex h-28 items-center justify-center rounded-[25px] border border-[var(--nova-border)] bg-[var(--nova-glass)] text-[var(--nova-text-secondary)] shadow-[var(--nova-shadow)] backdrop-blur-[60px] transition duration-300 hover:-translate-y-1 hover:text-white"
               >
                 Wearables
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a
+              <Link
                 href="/products"
                 className="flex h-28 items-center justify-center rounded-[25px] border border-[var(--nova-border)] bg-[var(--nova-glass)] text-[var(--nova-text-secondary)] shadow-[var(--nova-shadow)] backdrop-blur-[60px] transition duration-300 hover:-translate-y-1 hover:text-white"
               >
                 Tablet
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

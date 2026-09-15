@@ -1,3 +1,4 @@
+import Link from "next/link";
 const Footer = () => {
   return (
     <footer className="clear-both overflow-hidden bg-[#020417] p-[60px] max-[680px]:p-[30px] max-[680px]:text-[0.7rem] border-t border-[var(--nova-border)]">
@@ -6,48 +7,48 @@ const Footer = () => {
           <h5 className="text-[13px] font-normal text-white">Explore</h5>
 
           <li className="m-[10px]">
-            <a
+            <Link
               href="/products"
               className="text-xs text-[#d5d5d5] no-underline transition duration-500 hover:text-white"
             >
               Phones
-            </a>
+            </Link>
           </li>
 
           <li className="m-[10px]">
-            <a
+            <Link
               href="/products"
               className="text-xs text-[#d5d5d5] no-underline transition duration-500 hover:text-white"
             >
               Laptops
-            </a>
+            </Link>
           </li>
 
           <li className="m-[10px]">
-            <a
+            <Link
               href="/products"
               className="text-xs text-[#d5d5d5] no-underline transition duration-500 hover:text-white"
             >
               Audio
-            </a>
+            </Link>
           </li>
 
           <li className="m-[10px]">
-            <a
+            <Link
               href="/products"
               className="text-xs text-[#d5d5d5] no-underline transition duration-500 hover:text-white"
             >
               Wearables
-            </a>
+            </Link>
           </li>
 
           <li className="m-[10px]">
-            <a
+            <Link
               href="/products"
               className="text-xs text-[#d5d5d5] no-underline transition duration-500 hover:text-white"
             >
               Tablet
-            </a>
+            </Link>
           </li>
         </ul>
 
@@ -55,12 +56,12 @@ const Footer = () => {
           <h5 className="text-[13px] font-normal text-white">Support</h5>
 
           <li className="m-[10px]">
-            <a
+            <Link
               href="/contact"
               className="text-xs text-[#d5d5d5] no-underline transition duration-500 hover:text-white"
             >
               Contact us
-            </a>
+            </Link>
           </li>
 
           <li className="m-[10px]">
@@ -87,9 +88,9 @@ const Footer = () => {
 
       <p className="float-left m-5 text-[#999999] max-[680px]:float-none max-[680px]:mx-3 max-[680px]:mb-5">
         Copyright © 2026{" "}
-        <a href="/" className="no-underline">
+        <Link href="/" className="no-underline">
           <strong className="text-white">Ahmed Zaher</strong>
-        </a>{" "}
+        </Link>{" "}
         All rights reserved.
       </p>
 

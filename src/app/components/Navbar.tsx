@@ -2,15 +2,14 @@
 
 import { useState } from "react";
 import Image from "next/image";
-
+import Link from "next/link";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <nav className="fixed top-0 left-0 z-50 w-full border-b border-[var(--nova-border)] bg-[var(--nova-glass)] backdrop-blur-[60px]">
       <div className="mx-auto flex h-25 max-w-7xl items-center justify-between px-6">
-        {/* Logo */}
-        <a href="/">
+        <Link href="/">
           {" "}
           <Image
             src="/images/icons/nova~3.png"
@@ -18,44 +17,44 @@ const Navbar = () => {
             width={90}
             height={40}
           />
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden items-center gap-8 text-xs md:flex">
-          <a
+          <Link
             href="/"
             className="transition-colors duration-200 hover:text-white"
           >
             Home
-          </a>
+          </Link>
 
-          <a
+          <Link
             href="/products"
             className="transition-colors duration-200 hover:text-white"
           >
             Products
-          </a>
+          </Link>
 
-          <a
+          <Link
             href="/about"
             className="transition-colors duration-200 hover:text-white"
           >
             About
-          </a>
+          </Link>
 
-          <a
+          <Link
             href="/contact"
             className="transition-colors duration-200 hover:text-white"
           >
             Contact
-          </a>
+          </Link>
 
-          <a
+          <Link
             href="/cart"
             className="transition-colors duration-200 hover:text-white"
           >
             Cart
-          </a>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -96,21 +95,21 @@ const Navbar = () => {
         }`}
       >
         <div className="flex flex-col gap-1 px-6 py-5">
-          <a
+          <Link
             href="/"
             onClick={() => setIsOpen(false)}
             className="rounded-xl px-4 py-3 text-sm transition-all duration-200 hover:bg-white/5 hover:text-white"
           >
             Home
-          </a>
+          </Link>
 
-          <a
+          <Link
             href="/products"
             onClick={() => setIsOpen(false)}
             className="rounded-xl px-4 py-3 text-sm transition-all duration-200 hover:bg-white/5 hover:text-white"
           >
             Products
-          </a>
+          </Link>
 
           <a
             href="/about"

@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import Link from "next/link";
 type Product = {
   id: string;
   name: string;
@@ -38,7 +38,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
         </h4>
 
         <div className="flex justify-end">
-          <a href={`/products/${product.id}`}>
+          <Link href={`/products/${product.id}`}>
             <button className="group relative h-12 w-40 rounded-xl bg-[linear-gradient(150deg,#d036c8,#d433c6,rgb(151,60,199),rgb(94,55,202),rgb(20,114,234))] p-px text-sm font-semibold text-white transition-all duration-300 mt-6  m-[10px] ">
               {" "}
               <span className="relative flex h-full w-full items-center justify-center rounded-[11px] bg-transparent transition-all duration-300 group-hover:bg-[var(--nova-bg-middle)] group-hover:text-[#b137c3] ">
@@ -46,7 +46,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
                 View Product{" "}
               </span>{" "}
             </button>
-          </a>
+          </Link>
         </div>
       </div>
     </div>
