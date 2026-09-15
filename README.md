@@ -1,36 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Nova 2.0
 
-## Getting Started
+A modern e-commerce frontend rebuilt with **Next.js, React, TypeScript, Tailwind CSS, and daisyUI**.
 
-First, run the development server:
+Nova 2.0 is a complete rebuild of the original Nova E-Commerce project, focusing on a cleaner component-based architecture, responsive design, and a modern frontend development workflow.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🌐 Live Demo
+
+[View Live Demo](live-demo-url)
+
+## ✨ Features
+
+* 🔎 Product search
+* 🏷️ Product filtering
+* 🛒 Add products to cart
+* 🗑️ Remove products from cart
+* 🔢 Update product quantities
+* 💰 Automatic cart total calculation
+* 🔐 Login interface with form validation
+* ⏳ Loading screen
+* 📱 Responsive design across different screen sizes
+* 💾 Cart data persistence using localStorage
+
+## 🛠️ Tech Stack
+
+* **Next.js 16**
+* **React 19**
+* **TypeScript**
+* **Tailwind CSS 4**
+* **daisyUI 5**
+* **Lucide React**
+* **ESLint**
+* **React Compiler**
+
+## 📄 Pages
+
+* **Home** — Main storefront and featured content
+* **Products** — Product browsing, search, and filtering
+* **Product Details** — Detailed information for individual products
+* **Cart** — Manage products, quantities, and cart total
+* **Login** — Login interface with form validation
+* **About** — Information about Nova
+* **Contact** — Contact page
+
+## 🧩 Project Structure
+
+```text
+src/
+├── app/
+│   ├── (main)/
+│   │   ├── about/
+│   │   │   └── page.tsx
+│   │   ├── cart/
+│   │   │   └── page.tsx
+│   │   ├── contact/
+│   │   │   └── page.tsx
+│   │   ├── products/
+│   │   │   └── [id]/
+│   │   │       └── page.tsx
+│   │   └── page.tsx
+│   │
+│   ├── login/
+│   │   └── page.tsx
+│   │
+│   ├── globals.css
+│   └── layout.tsx
+│
+├── components/
+│   ├── Footer.tsx
+│   ├── Navbar.tsx
+│   ├── ProductCard.tsx
+│   └── LoadingScreen.tsx
+│
+└── data/
+    └── products.ts
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🖼️ Screenshots
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+![Nova 2.0 Preview](./public/images/preview.png)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🎯 Project Goal
 
-## Learn More
+Nova 2.0 was built as a practical frontend project to apply modern React and Next.js development concepts in a real-world e-commerce interface.
 
-To learn more about Next.js, take a look at the following resources:
+The project also serves as a rebuild of the original Nova E-Commerce project, moving from a traditional **HTML, CSS, and JavaScript** implementation to a modern component-based architecture.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 👨‍💻 Author
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Ahmed Zaher Abdelmohsen**
 
-## Deploy on Vercel
+Frontend Developer focused on building modern, responsive, and user-friendly web experiences.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+* Portfolio: `<portfolio-url>`
+* GitHub: `https://github.com/A-H-M-E-D-Z-A-H-E-R`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+⭐ If you found this project interesting, feel free to explore the repository.
