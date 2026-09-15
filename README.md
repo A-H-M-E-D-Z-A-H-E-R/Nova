@@ -6,7 +6,7 @@ Nova 2.0 is a complete rebuild of the original Nova E-Commerce project, focusing
 
 ## 🌐 Live Demo
 
-[View Live Demo](live-demo-url)
+[View Live Demo](https://nova-lemon-eta.vercel.app/)
 
 ## ✨ Features
 
