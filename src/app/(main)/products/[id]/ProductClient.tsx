@@ -1,8 +1,10 @@
+
 "use client";
+
 import React from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import products from "@/app/components/data/products";
-
 
 type ProductPageProps = {
   params: Promise<{
@@ -11,6 +13,8 @@ type ProductPageProps = {
 };
 
 export default function ProductPage({ params }: ProductPageProps) {
+  const router = useRouter();
+
   const [productId, setProductId] = React.useState<string | null>(null);
 
   React.useEffect(() => {
@@ -40,7 +44,7 @@ export default function ProductPage({ params }: ProductPageProps) {
     }
 
     localStorage.setItem("cart", JSON.stringify(cart));
-    window.location.href = "/cart";
+    router.push("/cart");
   };
 
   if (!product) {
