@@ -1,7 +1,9 @@
+
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: "export",
+  basePath: "/Nova",
   reactCompiler: true,
   devIndicators: false,
 
@@ -13,3 +15,4 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
+
