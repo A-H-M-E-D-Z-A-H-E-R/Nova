@@ -91,7 +91,7 @@ The project also serves as a rebuild of the original Nova E-Commerce project, mo
 
 Frontend Developer focused on building modern, responsive, and user-friendly web experiences.
 
-* Portfolio: `<portfolio-url>`
+* Portfolio: `https://a-h-m-e-d-z-a-h-e-r.github.io/Portfolio/`
 * GitHub: `https://github.com/A-H-M-E-D-Z-A-H-E-R`
 
 ---
